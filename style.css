@@ -1,0 +1,160 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.display {
+  display: flex;
+  justify-content: end;
+  grid-area: numbers-to-display;
+  background-color: black;
+  height: 7rem;
+}
+
+.buttons-part {
+  grid-area: buttons-part;
+}
+
+.page {
+  display: grid;
+  width: 100%;
+  max-width: 28.125rem;
+  grid-template-areas: 
+    "numbers-to-display"
+    "buttons-part";
+  grid-template-rows: auto 1fr;
+}
+
+.button-c {
+  grid-area: clear;
+}
+
+.button-arrow {
+  grid-area: arrow;
+}
+
+.button-division {
+  grid-area: division;
+}
+
+.button-7 {
+  grid-area: seven;
+}
+
+.button-8 {
+  grid-area: eight;
+}
+
+.button-9 {
+  grid-area: nine;
+}
+
+.button-multiplication {
+  grid-area: multipl;
+}
+
+.button-4 {
+  grid-area: four;
+}
+
+.button-5 {
+  grid-area: five;
+}
+
+.button-6 {
+  grid-area: six;
+}
+
+.button-minus {
+  grid-area: minus;
+}
+
+.button-1 {
+  grid-area: one;
+}
+
+.button-2 {
+  grid-area: two;
+}
+
+.button-3 {
+  grid-area: three;
+}
+
+.button-plus {
+  grid-area: plus;
+}
+
+.button-0 {
+  grid-area: zero;
+}
+
+.button-equal {
+  grid-area: equal;
+}
+
+button {
+  background-color: #d8d9db;
+  border: solid 0rem;
+  color: black;
+  font-size: 2.75rem;
+  font-weight: normal;
+}
+
+button:hover {
+  background-color: rgb(233, 233, 233);
+}
+
+button:active {
+  background-color: rgb(170, 170, 170)
+}
+
+.operations:hover {
+  background-color: #e3ab6f;
+}
+
+.operations:active {
+  background-color: #e3ab6f86
+}
+
+.buttons {
+  display: grid;
+  grid-gap: .125rem;
+  background-color: black;
+  grid-template-areas: 
+    "clear  clear   arrow   division"
+    "seven  eight   nine    multipl "
+    "four   five    six     minus   "
+    "one    two     three   plus    "
+    "zero   zero    zero    equal   ";
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  aspect-ratio: 4/5;
+}
+
+.numbers-on-display {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding-right: .625rem;
+  width: 100%;
+  max-width: 28rem;
+  font-size: 5rem;
+  font-weight: 200;
+  background-color: black;
+  border: 0rem;
+  color: white;
+  white-space: nowrap;
+  overflow: hidden; 
+  font-family:'Courier New', Courier, monospace;
+}
+
+.operations {
+  background-color: #e0974b;
+  color: white;
+}
+
+input {
+  caret-color: transparent;
+}
